@@ -118,8 +118,8 @@ async def main():
     await app.initialize()  # ✅ NECESARIO
     await app.start()
     await app.updater.start_polling()
-    #await app.updater.idle() 
-    await asyncio.Event().wait()  # Mantener vivo el bot
+    await app.updater.idle() 
+    #await asyncio.Event().wait()  # Mantener vivo el bot
 
 # 🚀 Ejecutar todo
 if __name__ == '__main__':
