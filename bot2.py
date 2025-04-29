@@ -115,7 +115,10 @@ async def main():
 
     print("🤖 Bot corriendo...")
 
+    await app.initialize()  # ✅ NECESARIO
     await app.start()
+    await app.updater.start_polling()
+    #await app.updater.idle() 
     await asyncio.Event().wait()  # Mantener vivo el bot
 
 # 🚀 Ejecutar todo
